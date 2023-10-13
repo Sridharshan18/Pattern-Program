@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for(int i = 1 ; i<=n; i++)
+        {
+            for(int j = 1 ; j<=i ; j++)
+            {
+                System.out.print(j+" ");
+            }
+           // for(int j = 1 ; j<=2*(n-i); j++) // no  space in pattern
+            for(int j = 1 ; j<= (n-i)*4; j++) // if sapce in pattern
+            {
+                System.out.print(" ");
+            }
+            for(int j = i ; j>0; j--)
+            {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
